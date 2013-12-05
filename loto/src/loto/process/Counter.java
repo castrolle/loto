@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Random;
 
 import loto.enums.RandomNumbers;
+import loto.model.ResultVO;
 import loto.model.RevengeResultVO;
 
 public class Counter {
@@ -14,7 +15,7 @@ public class Counter {
 	public static double[] relativeFrequency = new double[46];
 	public static double[] cumulativeFrequency = new double[46];
 
-	public static void loadData(List<RevengeResultVO> result) {
+	public static void loadRevengeResult(List<RevengeResultVO> result) {
 		for (RevengeResultVO revengeResultVO : result) {
 			Counter.RESUTLS[revengeResultVO.getR1()]++;
 			Counter.RESUTLS[revengeResultVO.getR2()]++;
@@ -25,7 +26,20 @@ public class Counter {
 			Counter.RESUTLS[revengeResultVO.getR7()]++;
 			Counter.RESUTLS[revengeResultVO.getR8()]++;
 		}
+	}
+	
+	public static void loadResult(List<ResultVO> result) {
+		for (ResultVO revengeResultVO : result) {
+			Counter.RESUTLS[revengeResultVO.getR1()]++;
+			Counter.RESUTLS[revengeResultVO.getR2()]++;
+			Counter.RESUTLS[revengeResultVO.getR3()]++;
+			Counter.RESUTLS[revengeResultVO.getR4()]++;
+		}
+	}
 
+
+
+		public static void monteCarlo() {
 		Counter.TOTAL = 0;
 		for (int i = 0; i < Counter.RESUTLS.length; i++) {
 			Counter.TOTAL += Counter.RESUTLS[i];
@@ -39,6 +53,7 @@ public class Counter {
 			Counter.relativeFrequency[i] = var;
 			Counter.cumulativeFrequency[i] = cumulative;
 		}
+
 	}
 
 	public static int getRandomNumber(RandomNumbers type) {
@@ -48,7 +63,7 @@ public class Counter {
 		if (type == RandomNumbers.MONTECARLO) {
 			double rand = random.nextDouble();
 			for (int i = 0; i < cumulativeFrequency.length; i++) {
-				if(rand > var && rand < cumulativeFrequency[i]){
+				if (rand > var && rand < cumulativeFrequency[i]) {
 					return i;
 				}
 				var = cumulativeFrequency[i];
