@@ -7,19 +7,12 @@ public class ResultVO {
 	private int r2;
 	private int r3;
 	private int r4;
+	private int r5;
+	private int r6;
 	private String date;
 
 	public ResultVO() {
 		// TODO Auto-generated constructor stub
-	}
-
-	public ResultVO(int id, int r1, int r2, int r3, int r4, String date) {
-		this.id = id;
-		this.r1 = r1;
-		this.r2 = r2;
-		this.r3 = r3;
-		this.r4 = r4;
-		this.date = date;
 	}
 
 	public int getId() {
@@ -60,6 +53,22 @@ public class ResultVO {
 
 	public void setR4(int r4) {
 		this.r4 = r4;
+	}
+
+	public int getR5() {
+		return r5;
+	}
+
+	public void setR5(int r5) {
+		this.r5 = r5;
+	}
+
+	public int getR6() {
+		return r6;
+	}
+
+	public void setR6(int r6) {
+		this.r6 = r6;
 	}
 
 	public String getDate() {

@@ -25,6 +25,10 @@ public class Counter {
 			Counter.RESUTLS[revengeResultVO.getR6()]++;
 			Counter.RESUTLS[revengeResultVO.getR7()]++;
 			Counter.RESUTLS[revengeResultVO.getR8()]++;
+			Counter.RESUTLS[revengeResultVO.getR9()]++;
+			Counter.RESUTLS[revengeResultVO.getR10()]++;
+			Counter.RESUTLS[revengeResultVO.getR11()]++;
+			Counter.RESUTLS[revengeResultVO.getR12()]++;
 		}
 	}
 	
@@ -34,6 +38,8 @@ public class Counter {
 			Counter.RESUTLS[revengeResultVO.getR2()]++;
 			Counter.RESUTLS[revengeResultVO.getR3()]++;
 			Counter.RESUTLS[revengeResultVO.getR4()]++;
+			Counter.RESUTLS[revengeResultVO.getR5()]++;
+			Counter.RESUTLS[revengeResultVO.getR6()]++;
 		}
 	}
 

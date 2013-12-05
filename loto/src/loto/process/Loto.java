@@ -9,7 +9,7 @@ import loto.model.ResultVO;
 import loto.model.RevengeResultVO;
 
 public class Loto {
-	public static void main(String[] args) throws FileNotFoundException {
+	public static void main(String[] args) throws FileNotFoundException, InterruptedException {
 
 		List<RevengeResultVO> revengeResult = CSVLoader.loadRevengeResult();
 		List<ResultVO> result = CSVLoader.loadResult();
@@ -17,11 +17,14 @@ public class Loto {
 		Counter.loadResult(result);
 		Counter.monteCarlo();
 
-		int[][] options = new int[1][5];
-		for (int j = 0; j < 1; j++) {
-			for (int i = 0; i < 5; i++) {
+		final int n = 32;
+		final int m = 7;
+		int[][] options = new int[n][m];
+		for (int j = 0; j < n; j++) {
+			for (int i = 0; i < m; i++) {
 				options[j][i] = Counter
 						.getRandomNumber(RandomNumbers.MONTECARLO);
+				Thread.sleep(options[j][i]*3);
 				System.out.print(options[j][i] + " ");
 			}
 			System.out.println();

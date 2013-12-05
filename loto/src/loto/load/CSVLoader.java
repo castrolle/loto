@@ -32,6 +32,10 @@ public class CSVLoader {
 		columnMapping.put("r6", "r6");
 		columnMapping.put("r7", "r7");
 		columnMapping.put("r8", "r8");
+		columnMapping.put("r9", "r9");
+		columnMapping.put("r10", "r10");
+		columnMapping.put("r11", "r11");
+		columnMapping.put("r12", "r12");
 		columnMapping.put("date", "date");
 
 		HeaderColumnNameTranslateMappingStrategy<RevengeResultVO> strategy = new HeaderColumnNameTranslateMappingStrategy<RevengeResultVO>();
@@ -58,6 +62,9 @@ public class CSVLoader {
 		columnMapping.put("r2", "r2");
 		columnMapping.put("r3", "r3");
 		columnMapping.put("r4", "r4");
+		columnMapping.put("r5", "r5");
+		columnMapping.put("r6", "r6");
+		
 		columnMapping.put("date", "date");
 
 		HeaderColumnNameTranslateMappingStrategy<ResultVO> strategy = new HeaderColumnNameTranslateMappingStrategy<ResultVO>();

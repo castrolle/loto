@@ -11,24 +11,14 @@ public class RevengeResultVO {
 	private int r6;
 	private int r7;
 	private int r8;
+	private int r9;
+	private int r10;
+	private int r11;
+	private int r12;
 	private String date;
 
 	public RevengeResultVO() {
 		// TODO Auto-generated constructor stub
-	}
-
-	public RevengeResultVO(int id, int r1, int r2, int r3,
-			int r4, int r5, int r6, int r7, int r8, String date) {
-		this.id = id;
-		this.r1 = r1;
-		this.r2 = r2;
-		this.r3 = r3;
-		this.r4 = r4;
-		this.r5 = r5;
-		this.r6 = r6;
-		this.r7 = r7;
-		this.r8 = r8;
-		this.date = date;
 	}
 
 	public int getId() {
@@ -101,6 +91,38 @@ public class RevengeResultVO {
 
 	public void setR8(int r8) {
 		this.r8 = r8;
+	}
+
+	public int getR9() {
+		return r9;
+	}
+
+	public void setR9(int r9) {
+		this.r9 = r9;
+	}
+
+	public int getR10() {
+		return r10;
+	}
+
+	public void setR10(int r10) {
+		this.r10 = r10;
+	}
+
+	public int getR11() {
+		return r11;
+	}
+
+	public void setR11(int r11) {
+		this.r11 = r11;
+	}
+
+	public int getR12() {
+		return r12;
+	}
+
+	public void setR12(int r12) {
+		this.r12 = r12;
 	}
 
 	public String getDate() {
