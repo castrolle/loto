@@ -12,11 +12,13 @@ public class RevengeResultVO {
 	private int r7;
 	private int r8;
 	private String date;
-	private int sum;
 
-	public RevengeResultVO(int id, int r1, int r2, int r3, int r4, int r5,
-			int r6, int r7, int r8, String date) {
-		super();
+	public RevengeResultVO() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public RevengeResultVO(int id, int r1, int r2, int r3,
+			int r4, int r5, int r6, int r7, int r8, String date) {
 		this.id = id;
 		this.r1 = r1;
 		this.r2 = r2;
